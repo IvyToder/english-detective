@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English Detective — The School Episode</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@700;800&display=swap">
+<style>
+:root{--ink:#2a1b4d;--pu:#7c3aed;--pk:#ff4fa3;--tq:#12b8b0;--yl:#ffd23f;--mu:#6c6390;--ac:#7c3aed;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{font-size:17px;scroll-padding-top:env(safe-area-inset-top,0px);height:100%}html.tm{font-size:23px}
+*{box-sizing:border-box}
+body{margin:0;min-height:100%;font:800 1rem/1.45 'Nunito',system-ui,sans-serif;color:var(--ink);background-color:#e8f1ff;background-image:radial-gradient(circle at 12% 8%,#ffe3f2 0 12%,transparent 13%),radial-gradient(circle at 90% 20%,#d6f8f5 0 14%,transparent 15%),linear-gradient(#e8f1ff,#f1e9ff);background-attachment:fixed}
+main{max-width:38rem;margin:0 auto;padding:.9rem}
+.card{background:#fff;border-radius:1.6rem;border-top:.55rem solid var(--ac);box-shadow:0 .5rem 1.6rem rgba(124,58,237,.16);padding:1.2rem;margin-bottom:1rem}
+.c{text-align:center}
+h1,h2{font-family:'Fredoka',sans-serif;font-weight:600;margin:.3rem 0 .6rem}
+h1{font-size:2.1rem;line-height:1.1;color:var(--ac)}h2.qt{font-size:1.4rem;text-align:center;margin:.3rem 0 1rem}
+p{margin:0 0 .7rem}.sub{color:var(--mu);font-weight:700}.tip{background:#fff7cf;border-radius:1rem;padding:.7rem .9rem}
+.em{font-size:3rem}
+.btn{font:600 1.1rem 'Fredoka',sans-serif;background:var(--ac);color:#fff;border:0;border-radius:1.1rem;padding:.9rem 1.3rem;min-height:3.3rem;width:100%;cursor:pointer;margin-top:.5rem;box-shadow:0 .3rem 0 rgba(42,27,77,.22)}
+.btn.g{background:#fff;color:var(--ac);box-shadow:inset 0 0 0 2px var(--ac)}.btn:active{transform:translateY(2px)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--yl);outline-offset:2px}
+input{width:100%;font:700 1.15rem 'Nunito',sans-serif;padding:.85rem;border:2px solid #d8cdfb;border-radius:1rem;background:#faf8ff;color:var(--ink);margin:.2rem 0 .6rem}
+label{display:block;text-align:left;margin-top:.5rem}
+.top{display:flex;align-items:center;gap:.5rem;margin-bottom:.4rem}
+.ib{font-size:1.25rem;width:2.9rem;height:2.9rem;border-radius:.9rem;border:0;background:#fff;box-shadow:0 .2rem .7rem rgba(124,58,237,.2);cursor:pointer}
+.pg{flex:1;font-size:.85rem}.bar{height:.7rem;background:#dcd0ff;border-radius:1rem;overflow:hidden;margin-top:.2rem}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--tq),var(--pk));transition:width .5s}
+.stats{display:flex;justify-content:space-between;font-size:.85rem;color:var(--mu);margin:0 .3rem .6rem}.stats b{color:var(--ink)}
+.st{background:#eaf3ff;border-radius:1rem;padding:.7rem .9rem;margin-bottom:.8rem;font-weight:700}.st.w{background:#ffe9e9}
+.opt{display:flex;align-items:center;gap:.8rem;width:100%;min-height:3.5rem;margin-bottom:.6rem;padding:.65rem .9rem;border-radius:1.1rem;border:2px solid transparent;background:#f4efff;color:var(--ink);font:800 1.15rem 'Nunito',sans-serif;text-align:left;cursor:pointer}
+.opt b{background:var(--ac);color:#fff;border-radius:.6rem;min-width:2rem;height:2rem;display:grid;place-items:center;font-size:.95rem}
+.opt:hover:not(:disabled){border-color:var(--ac)}.opt.ok{background:#d9f7e4;border-color:#22b45a}.opt.no{background:#ffe6dc;border-color:#ff8a3d}
+.sp{width:100%;min-height:4.2rem;margin-bottom:.7rem;border:0;border-radius:1.2rem;color:#fff;font:600 1.3rem 'Fredoka',sans-serif;cursor:pointer;box-shadow:0 .3rem 0 rgba(42,27,77,.22)}.sp.ps{background:#7c3aed}.sp.pc{background:#12b886}.sp:disabled{opacity:.55;box-shadow:none}.sp.ok{opacity:1;outline:4px solid var(--yl)}
+#ans{min-height:3.5rem;border:2px dashed #b9a8ff;border-radius:1rem;padding:.5rem;display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.8rem;align-items:center}.ph{color:var(--mu);font-weight:700}
+#bank{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.chip{padding:.65rem .95rem;min-height:3rem;border-radius:.9rem;border:2px solid var(--ac);background:#fff;color:var(--ink);font:800 1.1rem 'Nunito',sans-serif;cursor:pointer}.chip.on{background:var(--ac);color:#fff}
+.bk{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:.8rem}.box{border-radius:1.1rem;padding:.6rem;min-height:9rem;cursor:pointer;text-align:center}.box.r{background:#efe6ff;border:2px dashed #7c3aed}.box.n{background:#ddf7ef;border:2px dashed #12b886}
+.box div{display:flex;flex-direction:column;gap:.35rem;margin-top:.4rem}
+#cards{display:flex;flex-direction:column;gap:.5rem}
+.cd{min-height:3rem;border-radius:.9rem;border:2px solid #d8cdfb;background:#fff;color:var(--ink);font:800 1rem 'Nunito',sans-serif;padding:.5rem .7rem;cursor:grab;text-align:left}.cd.sel{border-color:var(--pk);background:#ffe8f3}.cd.done{background:#d9f7e4;border-color:#22b45a;font-size:.85rem;cursor:default}.cd.bad{animation:sk .4s;background:#ffe6dc}
+.ov{position:fixed;inset:0;z-index:9;background:rgba(42,27,77,.7);display:grid;place-items:center;padding:1rem;overflow:auto}
+.fb{max-width:26rem;width:100%;text-align:center;animation:pop .3s;margin:0}.big{font-size:1.25rem;color:var(--ac)}.pts{color:#12b886;font-size:1.3rem}.hot{color:var(--pk)}
+.s{position:fixed;left:50%;top:38%;z-index:10;font-size:1.7rem;pointer-events:none;animation:bu .9s ease-out forwards}
+.g3{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1rem 0}.g3 div{background:#f4efff;border-radius:1rem;padding:.7rem}.g3 b{display:block;font-size:1.4rem}
+@keyframes pop{from{transform:scale(.8);opacity:0}}@keyframes sk{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}@keyframes bu{to{transform:translate(var(--x),var(--y)) scale(.5) rotate(200deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+const NW=/\b(?:don'?t|doesn'?t|do not|does not)\s+(?![a-z]+ing\b|[a-z]+s\b)[a-z]+|\b(?:am not|isn'?t|aren'?t|is not|are not)\s+[a-z]+ing\b/;
+const D=[
+{n:"SPOT IT!",e:"🔎",c:"#7c3aed",tip:"🔎 Ask yourself: Is it a routine or is it happening now? ROUTINE → Simple Present. NOW → Present Continuous.",q:[
+{t:"spot",s:"Emma goes to school every day.",k:"s",x:"“Every day” tells us this is a routine."},
+{t:"spot",s:"Look! Emma is running!",k:"c",x:"“Look!” and is running: it is happening now."},
+{t:"spot",s:"Lucas plays basketball on Fridays.",k:"s",x:"He does it every Friday: a routine."},
+{t:"spot",s:"The girls are talking right now.",k:"c",x:"“Right now” tells us it is happening now."},
+{t:"spot",s:"Sofia usually watches TV after dinner.",k:"s",x:"“Usually” tells us this is a routine."},
+{t:"spot",s:"They are having lunch at the moment.",k:"c",x:"“At the moment” tells us it is happening now."}]},
+{n:"CHOOSE IT!",e:"✅",c:"#12b8b0",tip:"Read the sentence. Is it a routine or is it happening now? Choose the correct form.",q:[
+{t:"mc",s:"My sister ___ English every Tuesday.",o:"studies|study|is studying",k:"s"},
+{t:"mc",s:"Look! The teacher ___ on the board.",o:"is writing|writes|write",k:"c"},
+{t:"mc",s:"We ___ pizza on Fridays.",o:"eat|are eating|eats",k:"s"},
+{t:"mc",s:"Listen! The baby ___.",o:"is crying|cries|cry",k:"c"},
+{t:"mc",s:"Tom ___ his room every Saturday.",o:"cleans|is cleaning|clean",k:"s"},
+{t:"mc",s:"Tom ___ his room right now.",o:"is cleaning|cleans|clean",k:"c"},
+{t:"mc",s:"My friends ___ soccer after school.",o:"play|plays|are playing",k:"s"},
+{t:"mc",s:"My friends ___ soccer now.",o:"are playing|play|plays",k:"c"},
+{t:"mc",s:"Anna usually ___ breakfast at 7:00.",o:"has|have|is having",k:"s"},
+{t:"mc",s:"Anna ___ breakfast now.",o:"is having|has|have",k:"c"}]},
+{n:"ROUTINE OR NOW?",e:"⏰",c:"#ff4fa3",tip:"Sort the cards. Tap a card, then tap the box. Or drag it.",q:[
+{t:"sort",s:"Sort the sentences.",c:[["I brush my teeth every morning.","s"],["She is brushing her teeth now.","c"],["We play volleyball on Saturdays.","s"],["They are playing volleyball at the moment.","c"],["He watches TV after dinner.","s"],["He is watching TV right now.","c"],["I usually read before bed.","s"],["I am reading now.","c"],["Sarah goes to school by bus.","s"],["Sarah is going to school now.","c"]]}]},
+{n:"FIX THE MISTAKE!",e:"🛠️",c:"#ff9f1c",tip:"One sentence has a mistake. Choose the correct sentence.",q:[
+{t:"mc",st:"✗ She play tennis every Saturday.",s:"Fix the mistake!",o:"She plays tennis every Saturday.|She is play tennis every Saturday.|She playing tennis every Saturday.",x:"She → plays (he / she / it + verb + s)."},
+{t:"mc",st:"✗ Look! The boys playing soccer.",s:"Fix the mistake!",o:"Look! The boys are playing soccer.|Look! The boys is playing soccer.|Look! The boys plays soccer.",x:"Happening now → are + verb-ing."},
+{t:"mc",st:"✗ She doesn't plays soccer.",s:"Fix the mistake!",o:"She doesn't play soccer.|She don't play soccer.|She doesn't playing soccer.",x:"After doesn't, use the base verb: play."},
+{t:"mc",st:"✗ Does she likes music?",s:"Fix the mistake!",o:"Does she like music?|Do she like music?|Is she like music?",x:"After does, use the base verb: like."},
+{t:"mc",st:"✗ They is studying now.",s:"Fix the mistake!",o:"They are studying now.|They are study now.|They studies now.",x:"They → are + verb-ing."},
+{t:"mc",st:"✗ He watchs TV every night.",s:"Fix the mistake!",o:"He watches TV every night.|He is watch TV every night.|He watching TV every night.",x:"watch → watches (add -es)."}]},
+{n:"BUILD THE SENTENCE!",e:"🧩",c:"#3b82f6",tip:"Tap the words in the correct order.",q:[
+{t:"build",s:"Build the sentence.",w:"She|plays|tennis|on|Saturdays",a:["She plays tennis on Saturdays."],x:"Routine → She plays (with -s)."},
+{t:"build",s:"Build the sentence.",w:"They|are|watching|TV|now",a:["They are watching TV now.","Now they are watching TV."],x:"Happening now → are + verb-ing."},
+{t:"build",s:"Build the sentence.",w:"He|doesn't|like|pizza",a:["He doesn't like pizza."],x:"doesn't + base verb (like, not likes)."},
+{t:"build",s:"Build the question.",w:"Does|she|play|the|piano",a:["Does she play the piano?"],x:"Does + she + base verb."},
+{t:"build",s:"Build the question.",w:"Are|they|playing|soccer",a:["Are they playing soccer?"],x:"Are + they + verb-ing."},
+{t:"build",s:"Build the sentence.",w:"I|am|not|studying|now",a:["I am not studying now.","Now I am not studying."],x:"am not + verb-ing."}]},
+{n:"COMPLETE THE SENTENCE!",e:"✏️",c:"#22a559",tip:"Write the correct form of the verb in brackets.",q:[
+{t:"fill",s:"Emma ___ (play) volleyball every Saturday.",a:["plays"],x:"Routine → plays."},
+{t:"fill",s:"Look! Emma ___ (play) volleyball.",a:["is playing"],x:"Happening now → is playing."},
+{t:"fill",s:"My dad ___ (watch) the news every evening.",a:["watches"],x:"Routine → watches (add -es)."},
+{t:"fill",s:"The children ___ (run) in the yard now.",a:["are running"],x:"Happening now → are running."},
+{t:"fill",s:"She ___ (not / like) spicy food.",a:["doesn't like","does not like"],x:"She → doesn't + base verb."},
+{t:"fill",s:"Listen! Tom ___ (sing) in the shower.",a:["is singing"],x:"Happening now → is singing."}]},
+{n:"QUESTIONS!",e:"❓",c:"#e11d74",tip:"Choose the correct word to start the question.",q:[
+{t:"mc",s:"___ you like English?",o:"Do|Are|Does",x:"You + like → Do you like…?"},
+{t:"mc",s:"___ she like music?",o:"Does|Do|Is",x:"She → Does she like…? (no -s after does)"},
+{t:"mc",s:"___ they playing soccer now?",o:"Are|Do|Does",x:"Now → Are they playing…?"},
+{t:"mc",s:"___ he studying right now?",o:"Is|Does|Do",x:"Right now → Is he studying…?"},
+{t:"mc",s:"___ your brother play the guitar?",o:"Does|Is|Do",x:"Routine question with he → Does…?"},
+{t:"mc",s:"___ the students reading now?",o:"Are|Do|Does",x:"Now → Are the students reading…?"}]},
+{n:"SHORT ANSWERS!",e:"💬",c:"#8b5cf6",tip:"Answer the question. Use the same verb as the question.",q:[
+{t:"mc",s:"Is she studying?",o:"Yes, she is.|Yes, she does.|Yes, she studies.",x:"Is she…? → Yes, she is."},
+{t:"mc",s:"Are they playing?",o:"No, they aren't.|No, they don't.|No, they isn't.",x:"Are they…? → No, they aren't."},
+{t:"mc",s:"Do you like pizza?",o:"Yes, I do.|Yes, I am.|Yes, I like.",x:"Do you…? → Yes, I do."},
+{t:"mc",s:"Does he play soccer?",o:"No, he doesn't.|No, he isn't.|No, he don't.",x:"Does he…? → No, he doesn't."},
+{t:"mc",s:"Is Tom watching TV?",o:"Yes, he is.|Yes, he does.|Yes, he watches.",x:"Is Tom…? → Yes, he is."},
+{t:"mc",s:"Do they have English classes on Mondays?",o:"Yes, they do.|Yes, they are.|Yes, they have.",x:"Do they…? → Yes, they do."}]},
+{n:"THE SCHOOL EPISODE",e:"📺",c:"#f59e0b",tip:"Read the story of Sunny Hill School. Then choose the best answer.",q:[
+{t:"mc",st:"At Sunny Hill School, Mia plays volleyball every day at recess. Today it is raining, so she is reading in the library. Her friend Leo usually eats lunch with her, but now he is talking to Ms. Rosa. Ms. Rosa teaches English on Mondays.",s:"Mia ___ volleyball every day.",o:"plays|is playing|play",k:"s"},
+{t:"mc",st:"At Sunny Hill School, Mia plays volleyball every day at recess. Today it is raining, so she is reading in the library. Her friend Leo usually eats lunch with her, but now he is talking to Ms. Rosa. Ms. Rosa teaches English on Mondays.",s:"Today, Mia ___ in the library.",o:"is reading|reads|read",k:"c"},
+{t:"mc",st:"At Sunny Hill School, Mia plays volleyball every day at recess. Today it is raining, so she is reading in the library. Her friend Leo usually eats lunch with her, but now he is talking to Ms. Rosa. Ms. Rosa teaches English on Mondays.",s:"Leo usually ___ lunch with Mia.",o:"eats|is eating|eat",k:"s"},
+{t:"mc",st:"At Sunny Hill School, Mia plays volleyball every day at recess. Today it is raining, so she is reading in the library. Her friend Leo usually eats lunch with her, but now he is talking to Ms. Rosa. Ms. Rosa teaches English on Mondays.",s:"Right now, Leo ___ to Ms. Rosa.",o:"is talking|talks|talk",k:"c"},
+{t:"mc",st:"At Sunny Hill School, Mia plays volleyball every day at recess. Today it is raining, so she is reading in the library. Her friend Leo usually eats lunch with her, but now he is talking to Ms. Rosa. Ms. Rosa teaches English on Mondays.",s:"Ms. Rosa ___ English on Mondays.",o:"teaches|is teaching|teach",k:"s"},
+{t:"mc",st:"At Sunny Hill School, Mia plays volleyball every day at recess. Today it is raining, so she is reading in the library. Her friend Leo usually eats lunch with her, but now he is talking to Ms. Rosa. Ms. Rosa teaches English on Mondays.",s:"Is Mia playing volleyball now?",o:"No, she isn't.|No, she doesn't.|Yes, she is.",x:"She is reading now, so: No, she isn't."}]},
+{n:"THINK!",e:"🧠",c:"#06b6d4",tip:"No clue words here! Think about the meaning of the situation.",q:[
+{t:"mc",st:"Mom asks: ‘What is Leo doing?’",s:"He ___ a book.",o:"is reading|reads|read",k:"c"},
+{t:"mc",st:"Mom asks: ‘What does Leo do on Sundays?’",s:"He ___ soccer.",o:"plays|is playing|play",k:"s"},
+{t:"mc",st:"Your friend calls you. You are in the kitchen with your mom.",s:"I ___ dinner with my mom.",o:"am making|make|makes",k:"c"},
+{t:"mc",st:"Someone asks about Nina’s hobby.",s:"Nina ___ the violin. She has lessons on Thursdays.",o:"plays|is playing|play",k:"s"},
+{t:"mc",st:"You see Sofia in the corridor. She has new shoes on her feet.",s:"Look at Sofia! She ___ her new shoes.",o:"is wearing|wears|wear",k:"c"},
+{t:"mc",st:"Tom’s grandmother lives in Salvador. Tom sees her in the summer.",s:"She ___ Tom every summer.",o:"visits|is visiting|visit",k:"s"}]},
+{n:"FINAL CHALLENGE",e:"🏆",c:"#ef4444",tip:"Mixed questions. Ask yourself: routine or now? You can do it!",q:[
+{t:"spot",s:"Maria walks to school with her friends.",k:"s",x:"It is what she does regularly: a routine."},
+{t:"mc",s:"Shh! The baby ___.",o:"is sleeping|sleeps|sleep",k:"c"},
+{t:"mc",s:"Ben ___ his teeth after breakfast.",o:"brushes|is brushing|brush",k:"s"},
+{t:"mc",st:"✗ My brother don't like broccoli.",s:"Fix the mistake!",o:"My brother doesn't like broccoli.|My brother isn't like broccoli.|My brother doesn't likes broccoli.",x:"He → doesn't + base verb."},
+{t:"fill",s:"The students ___ (write) a test right now.",a:["are writing"],x:"Right now → are writing."},
+{t:"fill",s:"Sam ___ (go) to bed at 9:00 every night.",a:["goes"],x:"Routine → goes (add -es)."},
+{t:"build",s:"Build the question.",w:"Is|he|eating|lunch|now",a:["Is he eating lunch now?"],x:"Is + he + verb-ing."},
+{t:"mc",s:"Does Lisa walk to school?",o:"No, she doesn't.|No, she isn't.|No, she don't.",x:"Does she…? → No, she doesn't."}]},
+{n:"BONUS WRITING",e:"✍️",c:"#a855f7",tip:"Write 3 short sentences. Use your own ideas!",q:[
+{t:"write",s:"Write about your routine, something happening now, and a negative sentence.",w:[["1. A routine (Simple Present)","I play soccer on Saturdays.",[/^i (?!am\b|'m\b)(?![a-z]+ing\b)[a-z]+ .+$/]],["2. Something happening now (Present Continuous)","I am studying English now.",[/\b(?:am|is|are)\s+[a-z]+ing\b|\b[a-z]+'s\s+[a-z]+ing\b|\b[a-z]+'re\s+[a-z]+ing\b/]],["3. A negative sentence","She doesn't like spicy food.",[NW]]],x:"Routine: play / plays · Now: am / is / are + verb-ing · Negative: don't / doesn't + base verb."}]}];
+const cq=q=>q.t=="sort"?q.c.length:1,TOT=D.reduce((a,l)=>a+l.q.reduce((b,q)=>b+cq(q),0),0);
+const CH=["You’re thinking like a detective!","Keep going!","Excellent!","Nice work!","One more clue!"];
+const $=s=>document.querySelector(s),app=$("#app");
+const sh=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const nrm=s=>s.toLowerCase().replace(/’/g,"'").replace(/[^a-z' ]/g,"").replace(/\s+/g," ").trim();
+let S=null,cnt={2:[0,0],3:[0,0,0]},lst={};
+function pos(n){const m=Math.min(...cnt[n]),c=[...Array(n).keys()].filter(i=>cnt[n][i]<=m+1&&i!=lst[n]),p=c[Math.random()*c.length|0];cnt[n][p]++;lst[n]=p;return p}
+function pos2(){const[a,b]=cnt[2];let p=a>b+1?1:b>a+1?0:Math.random()*2|0;if(lst.n>=2&&p==lst[2])p=1-p;lst.n=p==lst[2]?(lst.n||0)+1:1;lst[2]=p;cnt[2][p]++;return p}
+const show=h=>{app.innerHTML=h;app.style.setProperty("--ac",S?D[S.l].c:"#7c3aed");scrollTo(0,0)};
+const cur=()=>D[S.l].q[S.i];
+function fx(a,n){for(let i=0;i<n;i++){const s=document.createElement("span"),g=Math.random()*6.28,d=90+Math.random()*140;s.className="s";s.textContent=a[i%a.length];s.style.cssText=`--x:${Math.cos(g)*d}px;--y:${Math.sin(g)*d}px`;document.body.append(s);setTimeout(()=>s.remove(),1000)}}
+function hdr(){const p=Math.round(S.done/TOT*100);
+ return`<div class="top"><button class="ib" onclick="welcome()" aria-label="Home">🏠</button><div class="pg"><b>Level ${S.l+1} / ${D.length}</b><div class="bar"><i style="width:${p}%"></i></div></div><button class="ib" onclick="review()" aria-label="Review">📘</button><button class="ib" onclick="document.documentElement.classList.toggle('tm')" aria-label="Big text">🔍</button></div><div class="stats"><span>⭐ <b>${S.score.toLocaleString("en-US")}</b></span><span>🔥 STREAK <b>${S.st}</b></span><span><b>${p}%</b></span></div>`}
+function welcome(){
+ show(`<section class="card c"><div class="em">🔎</div><h1>ENGLISH DETECTIVE</h1><h2>The School Episode</h2><p class="sub">Simple Present vs. Present Continuous</p><p class="tip">🔎 Ask yourself:<br>Is it a routine or is it happening now?</p><button class="btn" onclick="start()">START THE CASE →</button>${S&&S.on?`<button class="btn g" onclick="ask()">CONTINUE</button>`:""}<button class="btn g" onclick="review()">📘 REVIEW</button></section>`)}
+function start(){S={l:0,i:0,score:0,st:0,best:0,ok:0,done:0,lvOk:0,lvPts:0,on:1};cnt={2:[0,0],3:[0,0,0]};lst={};intro()}
+function intro(){
+ const L=D[S.l];S.i=0;S.lvOk=0;S.lvPts=0;
+ show(`${hdr()}<section class="card c"><div class="em">${L.e}</div><p class="sub">LEVEL ${S.l+1}</p><h1>${L.n}</h1><p class="tip">${L.tip}</p><button class="btn" onclick="ask()">GO! →</button></section>`)}
+function ask(){
+ const q=cur();let h=hdr()+`<section class="card">${q.st?`<p class="st ${q.st[0]=="✗"?"w":""}">${q.st}</p>`:""}<h2 class="qt">${q.s.replace(/___/g,"______")}</h2>`;
+ if(q.t=="mc"){const a=q.o.split("|"),c=a.shift(),p=pos(3);a.splice(p,0,c);S.pos=p;h+=a.map((o,k)=>`<button class="opt" onclick="pk(${k})"><b>${"ABC"[k]}</b><span>${o}</span></button>`).join("")}
+ else if(q.t=="spot"){const p=pos2(),o=(q.k=="s")==!p?["s","c"]:["c","s"];S.pos=p;h+=o.map((k,i)=>`<button class="sp p${k}" onclick="pk(${i})">${k=="s"?"🟣 SIMPLE PRESENT":"🟢 PRESENT CONTINUOUS"}</button>`).join("")}
+ else if(q.t=="fill")h+=`<input id="fi" autocomplete="off" autocapitalize="off" placeholder="Type your answer" onkeydown="if(event.key=='Enter')ck()"><button class="btn" onclick="ck()">CHECK</button>`;
+ else if(q.t=="write")h+=q.w.map((w,k)=>`<label>${w[0]}<input id="w${k}" autocomplete="off" placeholder="Type your sentence"></label>`).join("")+`<button class="btn" onclick="ck()">CHECK</button>`;
+ else if(q.t=="build"){let w=q.w.split("|");do sh(w);while(q.a.some(a=>nrm(a)==nrm(w.join(" "))));S.ws=w;S.bd=[];h+=`<div id="ans"></div><div id="bank"></div><button class="btn" onclick="ck()">CHECK</button><button class="btn g" onclick="S.bd=[];rb()">CLEAR</button>`}
+ else{S.sl=null;S.left=q.c.length;S.first=0;S.sm={};S.sp=0;
+  h+=`<p class="c sub" id="stt">Tap a card, then tap its box. Or drag it.</p><div class="bk"><div class="box r" onclick="bp('s')" ondragover="event.preventDefault()" ondrop="dp(event,'s')"><b>🟣 ROUTINE</b><div id="bs"></div></div><div class="box n" onclick="bp('c')" ondragover="event.preventDefault()" ondrop="dp(event,'c')"><b>🟢 HAPPENING NOW</b><div id="bc"></div></div></div><div id="cards">${sh(q.c.map((_,i)=>i)).map(i=>`<button class="cd" id="k${i}" draggable="true" ondragstart="event.dataTransfer.setData('text','${i}');S.sl=${i}" onclick="sc(${i})">${q.c[i][0]}</button>`).join("")}</div>`}
+ show(h+"</section>");if(q.t=="build")rb();if(q.t=="fill")$("#fi").focus()}
+function rb(){$("#ans").innerHTML=S.bd.map(i=>`<button class="chip on" onclick="S.bd=S.bd.filter(x=>x!=${i});rb()">${S.ws[i]}</button>`).join("")||'<span class="ph">Tap the words below</span>';$("#bank").innerHTML=S.ws.map((w,i)=>S.bd.includes(i)?"":`<button class="chip" onclick="S.bd.push(${i});rb()">${w}</button>`).join("")}
+function sc(i){if($("#k"+i).classList.contains("done"))return;S.sl=i;document.querySelectorAll(".cd").forEach(b=>b.classList.toggle("sel",b.id=="k"+i))}
+const bp=k=>S.sl!=null&&pl(S.sl,k),dp=(e,k)=>{e.preventDefault();pl(+e.dataTransfer.getData("text"),k)};
+function pl(i,k){
+ const q=cur(),b=$("#k"+i);if(!b||b.classList.contains("done"))return;
+ if(q.c[i][1]==k){b.classList.remove("sel");b.classList.add("done");b.draggable=false;b.onclick=null;$("#b"+k).append(b);S.sl=null;
+  if(!S.sm[i]){S.first++;S.st++;S.best=Math.max(S.best,S.st);let p=100+(S.st%3==0?50:0);S.score+=p;S.sp+=p}
+  $("#stt").textContent="✅ Correct!";if(!--S.left)endSort()}
+ else{S.sm[i]=1;S.st=0;b.classList.add("bad");setTimeout(()=>b.classList.remove("bad"),500);$("#stt").textContent="🔎 Ask yourself: routine or happening now?"}}
+function endSort(){const n=cur().c.length;S.done+=n;S.ok+=S.first;S.lvOk+=S.first;S.lvPts+=S.sp;
+ ov(`<h1>🌟 GREAT!</h1><p class="big">${S.first} / ${n} on the first try</p><p class="pts">+${S.sp} POINTS</p><p>🟣 ROUTINE → Simple Present<br>🟢 HAPPENING NOW → Present Continuous</p><button class="btn" onclick="adv()">CONTINUE →</button>`);fx(["✨","⭐","💜"],14)}
+function ov(h){const o=document.createElement("div");o.className="ov";o.innerHTML=`<div class="card fb c">${h}</div>`;document.body.append(o)}
+function pk(k){const q=cur(),ok=k==S.pos;
+ document.querySelectorAll(".opt,.sp").forEach((b,j)=>{b.disabled=true;if(j==S.pos)b.classList.add("ok");else if(j==k)b.classList.add("no")});
+ const cor=q.t=="spot"?(q.k=="s"?"🟣 SIMPLE PRESENT":"🟢 PRESENT CONTINUOUS"):q.o.split("|")[0];
+ res(ok,cor,q.x||(q.k=="s"?"🟣 Routine → Simple Present.":"🟢 Happening now → Present Continuous."),q.k)}
+function ck(){const q=cur();
+ if(q.t=="fill"){const v=nrm($("#fi").value);if(v)res(q.a.map(nrm).includes(v),q.a[0],q.x)}
+ else if(q.t=="build"){if(S.bd.length==S.ws.length)res(q.a.map(nrm).includes(nrm(S.bd.map(i=>S.ws[i]).join(" "))),q.a[0],q.x)}
+ else{const v=q.w.map((_,k)=>nrm($("#w"+k).value));if(v.every(Boolean))res(q.w.every((w,k)=>w[2].some(r=>r.test(v[k]))),q.w.map(w=>w[1]).join("<br>"),q.x)}}
+function res(ok,cor,x,k){
+ const q=cur(),had=S.st;let pts=0,msg="";S.done++;
+ if(ok){S.ok++;S.lvOk++;S.st++;S.best=Math.max(S.best,S.st);pts=100;if(S.st%3==0){pts+=50;msg=`<p class="hot">🔥 ${S.st} IN A ROW! +50</p>`}S.score+=pts;S.lvPts+=pts}else S.st=0;
+ ov(`<h1>${ok?"🌟 GREAT!":"🔎 ALMOST!"}</h1>${ok?`<p class="big">${x}</p>${msg}<p class="pts">+${pts} POINTS</p><p class="sub">${CH[Math.random()*CH.length|0]}</p>`:`<p>${q.t=="write"?"For example:":"The correct answer is:"}</p><p class="big">${cor}</p><p>${x}</p>${k?`<p class="tip">🔎 Ask yourself: Is it a routine or is it happening now?</p>`:""}<p class="sub">${had?"Good try! Start a new streak!":"Every clue makes you a better detective!"}</p>`}<button class="btn" onclick="adv()">${ok?"CONTINUE →":"GOT IT →"}</button>`);
+ if(ok)fx(["✨","⭐","💜"],12)}
+function adv(){$(".ov").remove();S.i++;S.i<D[S.l].q.length?ask():lvDone()}
+function lvDone(){
+ const L=D[S.l],n=L.q.reduce((b,q)=>b+cq(q),0),r=S.lvOk/n,st=r>=.9?3:r>=.6?2:1,last=S.l==D.length-1;
+ show(`${hdr()}<section class="card c"><div class="em">🎉</div><h1>LEVEL COMPLETE!</h1><p class="big">${"⭐".repeat(st)}${"☆".repeat(3-st)}</p><div class="g3"><div><b>${S.lvOk} / ${n}</b>correct</div><div><b>${S.lvPts}</b>points</div></div><button class="btn" onclick="${last?"final()":"S.l++;intro()"}">${last?"SOLVE THE CASE →":"NEXT LEVEL →"}</button></section>`);fx(["🎉","✨","⭐"],20)}
+function final(){
+ S.on=0;S.l=D.length-1;
+ show(`<section class="card c"><div class="em">🏆</div><h1>CASE SOLVED!</h1><p class="sub">Level 13 · Victory</p><div class="g3"><div><b>${S.score.toLocaleString("en-US")}</b>points</div><div><b>${S.ok} / ${TOT}</b>correct</div><div><b>${D.length}</b>levels completed</div><div><b>🔥 ${S.best}</b>best streak</div></div><p class="big">You are a super English detective! You know when to use Simple Present and Present Continuous.</p><button class="btn" onclick="start()">PLAY AGAIN</button><button class="btn g" onclick="review()">📘 REVIEW</button></section>`);fx(["🏆","✨","⭐","💜"],24)}
+function review(){
+ ov(`<h2 style="text-align:left">🔎 Ask yourself:<br>Routine or happening now?</h2><p style="text-align:left">🟣 <b>SIMPLE PRESENT</b> = routine<br>I / you / we / they play.<br>He / she / it plays.<br>She doesn't play. Does she play?<br>Emma plays volleyball every Saturday.</p><p style="text-align:left">🟢 <b>PRESENT CONTINUOUS</b> = happening now<br>am / is / are + verb-ing<br>She isn't playing. Is she playing?<br>Emma is playing volleyball now.</p><button class="btn" onclick="this.closest('.ov').remove()">CLOSE</button>`)}
+welcome();
+</script>
+</body>
+</html>
